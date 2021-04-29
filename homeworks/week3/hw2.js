@@ -1,9 +1,7 @@
 // 輸入範圍 start~end
 function lily(start, end) {
   for (let i = start; i <= end; i++) {
-    if (isLily(i)) {
-      console.log(i)
-    }
+    if (isLily(i)) console.log(i)
   }
 }
 // 判斷是否為水仙花數
