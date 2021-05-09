@@ -9,9 +9,28 @@ const options = {
 }
 
 request(options, (error, response, body) => {
-  const json = JSON.parse(body)
-  const total = json._total
+  // 處理傳送 request 錯誤
+  if (error) {
+    console.log('Error message: ', error)
+    return
+  }
+  // 處理 response 狀態碼
+  if (!(response.statusCode >= 200 && response.statusCode < 300)) {
+    console.log('invalid request')
+    return
+  }
+  // 處理接的資料不是 json 格式
+  let data
+  try {
+    data = JSON.parse(body)
+  } catch (error) {
+    console.log(error)
+    return
+  }
+  const total = data.top.length
   for (let i = 0; i < total; i++) {
-    console.log(`${json.top[i].viewers} ${json.top[i].game.name}`)
+    if (!(data.top[i] === undefined)) {
+      console.log(`${data.top[i].viewers} ${data.top[i].game.name}`)
+    }
   }
 })
