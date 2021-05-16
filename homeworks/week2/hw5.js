@@ -1,20 +1,23 @@
 function join(arr, concatStr) {
-    var new_str=''
-    for(var i=0;i<arr.length-1;i++){
-        new_str += arr[i]
-        new_str += concatStr
-    }
-    new_str += arr[arr.length-1]
-    return new_str
+  if (arr.length === 0) {
+    return ''
+  }
+  let newStr = ''
+  for (let i = 0; i < arr.length - 1; i++) {
+    newStr += arr[i]
+    newStr += concatStr
+  }
+  newStr += arr[arr.length - 1]
+  return newStr
 }
 
 function repeat(str, times) {
-    var new_str=''
-    for(var i=0;i<times;i++){
-        new_str += str
-    }
-    return new_str
+  let newStr = ''
+  for (let i = 0; i < times; i++) {
+    newStr += str
+  }
+  return newStr
 }
 
-console.log(join(['a'], '!'));
-
+console.log(join(['a'], '!'))
+console.log(repeat(['a'], 5))
