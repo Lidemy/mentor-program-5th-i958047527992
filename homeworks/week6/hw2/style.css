@@ -1,0 +1,97 @@
+body {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+	max-width: 645px;
+	margin: 0 auto;
+	display: flex;
+	align-content: center;
+	margin-top: 10%;
+	padding: 30px 20px;
+}
+
+.section {
+	width: 645px;
+	margin: 0 auto 66px auto;
+	display: flex;
+	padding-left: 42px;
+	border-top: 8px solid #fad312;
+	background: #ffffff;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.section h1 {
+	font-size: 36px;
+}
+
+.section p {
+	font-size: 14px;
+	line-height: 1.9em;
+}
+
+.section .caution {
+	color: #e74149;
+	font-size: 16px;
+}
+
+.section form div {
+	margin: 30px 0;
+	line-height: 2.2em;
+}
+
+form div label {
+	font-size: 20px;
+}
+
+.section form div span {
+	color: red;
+}
+
+.section form div p {
+	font-size: 14px;
+	margin: -5px 0 10px 0;
+}
+
+.type__option {
+	font-size: 14px;
+}
+
+.submit {
+	width: 92px;
+	height: 40px;
+	background-color: #fad312;
+	font-size: 15px;
+	border-radius: 3px;
+	border: none;
+}
+
+form > p {
+	margin-bottom: 35px;
+}
+
+.fill {
+	width: 287px;
+	border: solid 1px #d0d0d0;
+}
+.fill::placeholder {
+	color: #afafaf;
+}
+footer {
+	background: #000000;
+	color: #999999;
+	display: flex;
+	justify-content: center;
+	padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+	.section {
+		width: 90%;
+	}
+}
