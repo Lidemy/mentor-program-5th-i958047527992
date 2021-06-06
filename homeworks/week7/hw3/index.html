@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app">
+    <!-- 標題處 -->
+    <div class="title">Todo List</div>
+    <div class="todo__text">
+      <input class="text__input" type="text" name="" id="" size="70" placeholder="Add the target you need to do here!">
+    </div>
+    <!-- todo list 本體 -->
+    <div class="todo__list">
+      <!-- todo list 的單位 -->
+      <div class="todo__item">
+        <label class="container">
+          <!-- todo list 的文字 -->
+          todo
+          <!-- todo list 的客製化 checkbox 與滑鼠游標移到框框會出現完成的視窗 -->
+          <div class="tooltip__finished">
+            <span class="tooltiptext">完成</span>
+            <input type="checkbox" class="todo__checkBox">
+            <span class="checkmark"></span>
+          </div>
+
+        </label>
+        <!-- todo list 刪除按鈕與滑鼠游標移到框框會出現刪除的視窗 -->
+        <div class="tooltip__del-btn">
+          <span class="tooltiptext">刪除</span>
+          <button class="del-btn">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

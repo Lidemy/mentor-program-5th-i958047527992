@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script src=""></script>
+  <title>新拖延運動報名表單</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="section">
+      <h1>新拖延運動報名表單</h1>
+      <p class="info">
+        活動日期：2020/12/10 ~ 2020/12/11 <br>
+        活動地點：台北市大安區新生南路二段1號
+      </p>
+      <div class="caution">
+        *必填
+      </div>
+      <form action="">
+        <div class="nickname">
+          <label for="nickname">暱稱 <span>*</span><br></label>
+          <input class="fill" type="text" name="nickname" id="nickname" placeholder="您的回答">
+        </div>
+        <div class="email">
+          <label for="email">電子郵件 <span>*</span><br></label>
+          <input class="fill" type="email" name="email" id="email" placeholder="您的電子郵件">
+        </div>
+        <div class="number">
+          <label for="number">手機號碼 <span>*</span><br></label>
+          <input class="fill" type="tel" name="number" id="number" placeholder="您的手機號碼">
+        </div>
+        <div class="type">
+          <label for="type">報名類型 <span>*</span><br></label>
+          <label class="type__option">
+            <input type="radio" name="type" id="lying" data-value="躺在床上用想像力實作"> 躺在床上用想像力實作
+          </label><br>
+          <label class="type__option">
+            <input type="radio" name="type" id="bend" data-value="趴在地上滑手機找現成的"> 趴在地上滑手機找現成的
+          </label>
+        </div>
+        <div class="place">
+          <label for="place">怎麼知道這個活動的？ <span>*</span><br></label>
+          <input class="fill" type="text" name="place" id="place" placeholder="您的回答">
+        </div>
+        <div class="else">
+          <label for="else">其他<br></label>
+          <p>對活動的一些建議</p>
+          <input class="fill" type="text" name="else" id="else" placeholder="您的回答">
+        </div>
+        <input class="submit" type="submit" value="提交">
+        <p>請勿透過表單送出您的密碼。</p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div>© 2020 © Copyright. All rights Reserved.</div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>

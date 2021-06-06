@@ -1,0 +1,196 @@
+.app {
+	background: #fffce3;
+	color: #179099;
+	text-align: center;
+	margin: 0 auto;
+	width: 50%;
+}
+.title {
+	font-size: 65px;
+}
+.todo__text {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.text__input {
+	background-color: #f1eed6;
+	border: none;
+	width: 80%;
+	padding: 10px;
+	border-bottom: 2px solid #179099;
+	font-size: 22px;
+	outline: none;
+}
+.todo__list {
+	font-size: 20px;
+	width: 83%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+.todo__item {
+	width: 100%;
+	text-align: left;
+	position: relative;
+}
+.todo__item:hover {
+	background: white;
+}
+.todo__item:hover .checkmark {
+	background: white;
+}
+.container {
+	display: inline-block;
+	position: relative;
+	margin: 25px 0;
+	padding-left: 45px;
+	cursor: pointer;
+	font-size: 22px;
+}
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/*客製化 checkbox 的部分*/
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #fffce3;
+	border: 2px solid #179099;
+	border-radius: 5px;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+.container .checkmark:after {
+	left: 9px;
+	top: 0px;
+	width: 7px;
+	height: 15px;
+	border: solid #179099;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.del-btn {
+	background: none;
+	border: none;
+	color: #179099;
+	font-size: 30px;
+}
+.todo__item > div {
+	display: inline;
+}
+/* Tooltip text */
+.todo__item .tooltip__finished .tooltiptext {
+	visibility: hidden;
+	width: 50px;
+	background-color: #179099;
+	color: #fff;
+	text-align: center;
+	padding: 7px 9px;
+	border-radius: 6px;
+	font-size: 15px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 38%;
+	margin-left: -60px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip__finished .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #179099 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip__finished:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+/* 同上 tooltip 樣式，用在刪除鍵上*/
+.todo__item .tooltip__del-btn {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.todo__item .tooltip__del-btn .tooltiptext {
+	visibility: hidden;
+	width: 50px;
+	background-color: #179099;
+	color: #fff;
+	text-align: center;
+	padding: 7px 9px;
+	border-radius: 6px;
+	font-size: 15px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	right: 0;
+	margin-right: -18px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip__del-btn .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #179099 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip__del-btn:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*當打勾時，會讓整行變得透明*/
+.checked {
+	opacity: 0.5;
+}
+/*打勾時，字會加上刪除線，原本是加在上面的 checked class 上，但掛在 todo__item 這個 div 上，不會使得裡面的文字加上刪除線樣式*/
+.line-through {
+	text-decoration: line-through;
+}
