@@ -1,0 +1,377 @@
+.navbar {
+	box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+
+	display: flex;
+}
+
+/*新增*/
+.navbar .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 84px;
+	background: white;
+}
+
+.wrapper {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+/*新增*/
+
+/*.navbar*/
+.navbar__site-name {
+	font-family: Questrial;
+	font-size: 36px;
+	color: #489846;
+
+	padding-left: 26px;
+}
+
+.navbar__options {
+	list-style: none;
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+.navbar__options li a {
+	text-decoration: none;
+	color: black;
+	padding: 13px 25px;
+	margin-left: 5px;
+	transition: background 0.2s;
+	border-radius: 8px;
+
+	display: block;
+}
+
+ul.navbar__options li.active a,
+ul.navbar__options a:hover {
+	background-color: #ff7286;
+	color: white;
+}
+
+.banner {
+	position: relative;
+	height: 767px;
+	background: url('./pic/bg-lottery.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.prize__banner__1 {
+	background: url('./pic/prize_1.jpg');
+}
+.prize__banner__2 {
+	background: url('./pic/prize_2.jpg');
+}
+.prize__banner__3 {
+	background: url('./pic/prize_3.jpg');
+}
+.prize__banner__4 {
+	background: black;
+	background-image: none;
+	color: white;
+}
+.prize__banner {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+/* 把獎項各別用 class 做起來 */
+.prize__banner::after {
+	content: '';
+	background: rgba(255, 255, 255, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.prize__banner__4::after {
+	background: rgb(0, 0, 0);
+}
+.hidden {
+	display: none;
+}
+
+.section {
+	text-align: center;
+	padding: 0;
+}
+.section .section__title {
+	display: inline-block;
+	margin: 80px 0 36px 0;
+	font-size: 36px;
+	border-left: solid 15px #a3dea2;
+	padding-left: 17px;
+}
+.section .section__description {
+	font-size: 16px;
+	line-height: 2em;
+}
+.buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 84px;
+}
+.button {
+	font-size: 36px;
+	color: #3e613d;
+	padding: 61px 80px 67px 79px;
+	border-radius: 10px;
+	transition: scale 0.2s;
+	cursor: pointer;
+}
+.buttons .btn-order {
+	background-color: #a8e8e1;
+}
+.buttons .btn-search {
+	background-color: #f9f9b5;
+	margin-left: 23px;
+}
+.button:hover {
+	transform: scale(1.2);
+}
+
+.section .section__dishes {
+	display: flex;
+	width: 100%;
+}
+.section .section__dishes div {
+	width: 25%;
+}
+.section .section__dishes div img {
+	width: 100%;
+}
+
+.section__comments {
+	display: flex;
+	margin-top: 50px;
+	background: #fff;
+}
+.section__comments .comment {
+	height: 200px;
+	border-radius: 5px;
+	border: solid 1px #c7e5ec;
+	box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+	font-size: 16px;
+	padding: 16px;
+	position: relative;
+	flex: 1;
+	line-height: 1.5em;
+}
+.comment + .comment {
+	margin-left: 16px;
+}
+
+.section__comments .comment .comment__id {
+	height: 105px;
+	width: 105px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.section__comments .comment .comment__id img {
+	border: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.comment__author {
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.comment__author p {
+	margin-top: 6px;
+	line-height: 18px;
+}
+
+.comment__info {
+	position: relative;
+	top: 40%;
+}
+
+.footer__top {
+	background: #e8efee;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footer__top .footer__info {
+	color: #484848;
+	font-size: 14px;
+	text-align: left;
+	padding: 40px;
+}
+
+.footer__top .footer__info div + div {
+	margin-top: 16px;
+}
+
+.footer__top .footer__site {
+	text-align: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.footer__top .footer__site div {
+	font-size: 14px;
+}
+
+.footer__top .footer__site .site {
+	font-size: 36px;
+	color: #489846;
+	font-family: Questrial;
+	padding-bottom: 10px;
+}
+
+.footer__bottom {
+	background: #35564b;
+	font-size: 16px;
+	color: white;
+	padding: 15px;
+}
+
+/* 新增處 */
+.container {
+	width: 500px;
+	height: 560px;
+	background: white;
+	border-radius: 16px;
+	box-sizing: border-box;
+	padding: 15px 21px;
+}
+
+.container h1 {
+	color: #5ec1b6;
+	font-size: 24px;
+	text-align: center;
+}
+
+.row {
+	margin: 10px 10px;
+	padding: 10px 0 25px 0;
+	vertical-align: middle;
+	border-bottom: solid 1px #cdcdcd;
+	border-bottom-style: dashed;
+}
+
+.row h2 {
+	font-size: 18px;
+	color: black;
+	display: inline-block;
+	margin: 0;
+	padding-top: 2px;
+}
+
+.row p {
+	font-size: 16px;
+	color: black;
+	display: inline-block;
+	width: 319px;
+	line-height: 1.5em;
+	text-align: justify;
+	vertical-align: top;
+	margin: 0;
+	margin-left: 10px;
+}
+
+.container button {
+	background-color: red;
+	color: white;
+	border: none;
+	width: 400px;
+	height: 55px;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	margin: 26px auto;
+	border-radius: 8px;
+}
+.container__prize {
+	z-index: 50;
+}
+.container__prize h1 {
+	color: black;
+	font-size: 36px;
+	text-align: center;
+	font-weight: normal;
+}
+
+.container__prize button {
+	background-color: red;
+	color: white;
+	border: none;
+	width: 400px;
+	height: 55px;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	margin: 26px auto;
+	border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+	.navbar .wrapper {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 120px;
+	}
+	.navbar__site-name {
+		margin-top: 8px;
+	}
+
+	.navbar__options {
+		display: flex;
+		width: 100%;
+	}
+
+	.navbar__options li {
+		flex: 1;
+	}
+	.navbar__options li a {
+		text-align: center;
+		border-radius: 0px;
+		margin: 0;
+	}
+	.buttons {
+		display: block;
+		margin-top: 84px;
+	}
+
+	.footer__top {
+		flex-direction: column-reverse;
+	}
+	.footer__top .footer__site {
+		margin-right: 0px;
+		text-align: left;
+		margin-left: 40px;
+	}
+	.container {
+		height: 675px;
+		width: 90%;
+	}
+	.row p {
+		margin-left: 0;
+		margin-top: 10px;
+		width: 100%;
+	}
+	button.lottery {
+		width: 80%;
+	}
+	button.lottery__back {
+		width: 325px;
+	}
+}
