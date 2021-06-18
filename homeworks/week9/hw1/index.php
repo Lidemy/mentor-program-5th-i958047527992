@@ -11,20 +11,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 網站最上頭的警告訊息 -->
   <header class='warning'>
     <strong>
     注意！本站為練習用網站，因教學用途刻意忽略資安的實作，註冊時請勿使用任何真實的帳號或密碼。
     </strong>
   </header>
-  <!-- 留言板 -->
   <main class="board">
     <h1 class="title">
     Comments
     </h1>
     <form action="board_add_comment.php" class="new-comment" method="post">
-      <!-- 如果登入，顯示「你好，<暱稱>」的訊息，顯示「登出」的按鈕。在留言欄底下會出現提交按鈕。
-      否則就顯示「登入」和「註冊」，並且把提交按鈕隱藏。 -->
       <div class="new-comment__nickname-area">
         <?php 
           $username = NULL;
@@ -63,7 +59,6 @@
     </form>
     <div class="hr">
     </div>
-    <!-- 抓出所有在資料庫的留言並顯示 -->
     <?php 
       $fetchCommentssql = sprintf("SELECT * FROM yiluan_w9_comments ORDER BY created_at DESC");
       $result = $conn->query($fetchCommentssql);

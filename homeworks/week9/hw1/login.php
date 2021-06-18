@@ -22,10 +22,8 @@
           <a href="register.php" class="btn register-btn">註冊</a>
           <?php
             if (!empty($_GET)){
-              // 如果沒有填帳號或密碼，顯示錯誤訊息 
               if ($_GET['errorNo'] === '1') {
                 echo "<h3 class='errorMessage'>帳號或密碼未填寫，請再輸入一次。</h3>";
-                // 如果資料庫沒有這個帳密，顯示錯誤訊息 
               } else if ($_GET['errorNo'] === '2') {
                 echo "<h3 class='errorMessage'>帳號或密碼輸入錯誤，請重新輸入。</h3>";
               }

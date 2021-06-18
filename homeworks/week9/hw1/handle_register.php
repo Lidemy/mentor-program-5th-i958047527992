@@ -1,12 +1,14 @@
 <?php
   require_once('conn.php');
+  
+  // 如果暱稱、帳密任一個沒填，用 get 傳錯誤訊息回 register.php 
+  if (empty($_POST['nickname']) || empty($_POST['username']) || empty($_POST['password'])) {
+    header('Location: register.php?errorNo=1');
+    die('資料不全');
+  }
   $nickname = $_POST['nickname'];
   $username = $_POST['username'];
   $password = $_POST['password'];
-  // 如果暱稱、帳密任一個沒填，用 get 傳錯誤訊息回 register.php 
-  if (empty($nickname) || empty($username) || empty($password)) {
-    header('Location: register.php?errorNo=1');
-  }
 
   $Registersql = sprintf("INSERT INTO yiluan_w9_users (nickname, username, password) VALUES ('%s', '%s', '%s')", $nickname, $username, $password);
   $result = $conn->query($Registersql);

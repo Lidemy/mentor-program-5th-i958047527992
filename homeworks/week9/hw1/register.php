@@ -22,11 +22,9 @@
           <a href="login.php" class="btn register-btn">登入</a>
           <?php
             if (!empty($_GET)){
-              // 如果暱稱、帳密任一個沒填，顯示錯誤訊息 
               if ($_GET['errorNo'] === '1') {
-                echo "<h3 class='errorMessage'>暱稱、帳號或密碼未填寫，請再輸入一次。</h3>";
+                echo "<h3 class='errorMessage'>帳號或密碼未填寫，請再輸入一次。</h3>";
               } else if ($_GET['errorNo'] === '3') {
-              // 如果帳號重複，顯示錯誤訊息 
                 echo "<h3 class='errorMessage'>帳號重複，請換別的。</h3>";
               }
             }
