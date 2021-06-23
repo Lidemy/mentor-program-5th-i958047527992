@@ -25,7 +25,7 @@
         <?php 
           $username = NULL;
           if (isset($_SESSION['username'])) {
-            $user = GetUserFromUsername($_SESSION['username']);
+            $user = getUserFromUsername($_SESSION['username']);
             $nickname = $user['nickname'];
             echo '<a href="handle_logout.php" class="btn login-logout">登出</a>';
             echo sprintf("<h3>你好，%s</h3>",$nickname);

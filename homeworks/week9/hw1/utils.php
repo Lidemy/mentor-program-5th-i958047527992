@@ -1,7 +1,7 @@
 <?php
   require_once('conn.php');
   
-  function GetUserFromUsername($username) {
+  function getUserFromUsername($username) {
     global $conn;
     $fetchAccountssql = sprintf("SELECT * FROM yiluan_w9_users WHERE username='%s'", $username);
     $result = $conn->query($fetchAccountssql);

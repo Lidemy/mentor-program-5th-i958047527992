@@ -16,10 +16,15 @@
   if ($result === TRUE) {
     // 如果註冊成功，用 get 傳訊息回 index.php 
     header('Location: index.php?register=1');
-  } else {
-    // 如果帳密有重複或註冊失敗，用 get 傳錯誤訊息回 register.php 
-    header('Location: register.php?errorNo=3');
-  }
+  } else if (!$result) {  
+    $code = $conn->errno;  
+    if ($code === 1062) {    
+      // 如果帳密有重複，用 get 傳錯誤訊息回 register.php 
+      header('Location: register.php?errorNo=3');
+    }  
+    die($conn->error);
+ }
+
 
 
 ?>

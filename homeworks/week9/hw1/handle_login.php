@@ -9,8 +9,8 @@
     die("帳密未填寫");
   }
 
-  $fetchAccountssql = sprintf("SELECT * FROM yiluan_w9_users WHERE username='%s' and password='%s'", $username, $password);
-  $result = $conn->query($fetchAccountssql);
+  $fetchAccountsSql = sprintf("SELECT * FROM yiluan_w9_users WHERE username='%s' and password='%s'", $username, $password);
+  $result = $conn->query($fetchAccountsSql);
   if ($result->num_rows < 1) {
     header('Location: login.php?errorNo=2');
   } else {
