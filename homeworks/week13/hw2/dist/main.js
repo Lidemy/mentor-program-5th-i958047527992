@@ -8802,7 +8802,6 @@ jQuery.extend( jQuery.event, {
 
 		// Fire handlers on the event path
 		i = 0;
-		// eslint-disable-next-line
 		while ( ( cur = eventPath[ i++ ] ) && !event.isPropagationStopped() ) {
 			lastElement = cur;
 			event.type = i > 1 ?
@@ -9158,7 +9157,6 @@ function addToPrefiltersOrTransports( structure ) {
 		if ( isFunction( func ) ) {
 
 			// For each dataType in the dataTypeExpression
-			// eslint-disable-next-line
 			while ( ( dataType = dataTypes[ i++ ] ) ) {
 
 				// Prepend if requested
@@ -9547,7 +9545,6 @@ jQuery.extend( {
 					if ( completed ) {
 						if ( !responseHeaders ) {
 							responseHeaders = {};
-							// eslint-disable-next-line
 							while ( ( match = rheaders.exec( responseHeadersString ) ) ) {
 								responseHeaders[ match[ 1 ].toLowerCase() + " " ] =
 									( responseHeaders[ match[ 1 ].toLowerCase() + " " ] || [] )
