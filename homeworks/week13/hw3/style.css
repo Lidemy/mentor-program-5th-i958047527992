@@ -1,0 +1,226 @@
+.navbar {
+	box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+
+	display: flex;
+}
+
+/*新增*/
+.navbar .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 84px;
+	background: white;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*.navbar*/
+.navbar__site-name {
+	font-size: 36px;
+	padding-left: 26px;
+}
+
+.navbar__options {
+	list-style: none;
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.navbar__options li a {
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	padding: 30px 20px;
+	transition: background 0.2s;
+	display: block;
+	margin-left: 10px;
+}
+
+ul.navbar__options a:hover {
+	background-color: #3b3737;
+	color: white;
+}
+
+.banner {
+	position: relative;
+	background: url('./pic/bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.game {
+	text-align: center;
+	color: white;
+	z-index: 2;
+}
+
+/* 把獎項各別用 class 做起來 */
+.banner::after {
+	content: '';
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.section {
+	text-align: center;
+	padding: 0;
+}
+.section .section__title {
+	display: inline-block;
+	margin: 80px 0 36px 0;
+	font-size: 36px;
+	border-left: solid 15px #a3dea2;
+	padding-left: 17px;
+}
+.section .section__description {
+	font-size: 16px;
+	line-height: 2em;
+}
+.buttons {
+	display: flex;
+	justify-content: center;
+	margin-top: 84px;
+}
+.button {
+	font-size: 36px;
+	color: #3e613d;
+	padding: 61px 80px 67px 79px;
+	border-radius: 10px;
+	transition: scale 0.2s;
+	cursor: pointer;
+}
+
+/* 新增處 */
+.game__streams {
+	width: 80%;
+
+	border-radius: 16px;
+	box-sizing: border-box;
+	padding: 15px 21px;
+	z-index: 2;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.stream__click {
+	width: 25vw;
+	margin: 20px 20px;
+}
+.stream {
+	width: 25vw;
+}
+.stream__screenshot {
+	height: 28vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.stream__info {
+	height: 75px;
+	background: #393a3c;
+	display: flex;
+	color: white;
+}
+.info__icon {
+	width: 75px;
+	height: 75px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.info__description {
+	width: 18vw;
+	display: inline-flex;
+	flex-direction: column;
+	padding: 10px;
+	line-height: 1.75em;
+}
+.description__name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.description__player {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@media (max-width: 768px) {
+	.navbar .wrapper {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 120px;
+	}
+	.navbar__site-name {
+		margin: 8px auto;
+		padding-left: 0;
+	}
+
+	/*新增*/
+	.navbar__options {
+		display: flex;
+		width: 100%;
+		font-size: 15px;
+	}
+
+	.navbar__options li {
+		flex: 1;
+	}
+	.navbar__options li a {
+		text-align: center;
+		border-radius: 0px;
+		margin: 0;
+		padding: 2px;
+		height: 60px;
+	}
+
+	.buttons {
+		display: block;
+		margin-top: 84px;
+	}
+
+	.container {
+		height: 650px;
+	}
+	.row {
+		flex-direction: column;
+	}
+	.stream__click {
+		width: 70vw;
+	}
+	.stream {
+		width: 70vw;
+	}
+	.info__description {
+		width: 40vw;
+	}
+	.stream__screenshot {
+		height: 161px;
+	}
+	.stream__click {
+		margin: 40px auto;
+	}
+}
