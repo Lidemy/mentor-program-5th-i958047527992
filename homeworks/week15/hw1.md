@@ -60,10 +60,12 @@ Webpack 則是另一個讓我大開眼界的東西，原來有這種可以從都
 參考資料：[【網頁安全】給網頁開發新人的 XSS 攻擊 介紹與防範](https://forum.gamer.com.tw/Co.php?bsn=60292&sn=11267)、[身為 Web 工程師，你一定要知道的幾個 Web 資訊安全議題](https://medium.com/starbugs/%E8%BA%AB%E7%82%BA-web-%E5%B7%A5%E7%A8%8B%E5%B8%AB-%E4%BD%A0%E4%B8%80%E5%AE%9A%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E5%B9%BE%E5%80%8B-web-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E8%AD%B0%E9%A1%8C-29b8a4af6e13)、[跨網站指令碼](https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC)、[Cross-site scripting (XSS) cheat sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
 
 #### Q7 同源政策
+
 雖然瀏覽器可以看到那個網站的資料，但因為同源政策的影響，瀏覽器可能會也可能不會傳遞資料給 Ajax。
 兩者不同處是一個是瀏覽器收到資料，顯示在網頁上；另一個則是瀏覽器收到資料，要傳給 Ajax。
 
 #### Q9
+
 忘了以函數作為參數的話，是不能在後面加上 `()`，加上括號的意思會變成，當瀏覽器加載中，start 函數就會被啟動而不是瀏覽器加載完才啟動。
 ---
 以下是補充理解的部分
